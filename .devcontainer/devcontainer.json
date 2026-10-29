@@ -1,0 +1,6 @@
+{
+  "name": "Crypto trading bot (Node 22)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "npm install --no-audit --no-fund",
+  "customizations": { "vscode": { "extensions": ["dbaeumer.vscode-eslint"] } }
+}

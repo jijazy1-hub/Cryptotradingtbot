@@ -1,0 +1,27 @@
+{
+  "name": "crypto-signal-bot-v2-enhanced",
+  "version": "2.23.0",
+  "description": "JijazyBot — Telegram trading assistant: position alerts on 7 exchanges, play-money practice, and buying/selling on each user's own Binance account (tested breakout strategy on every liquid Binance coin, closed daily; keys can never withdraw)",
+  "main": "index.js",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "scheduler": "node scheduler.js",
+    "backtest": "node backtest.js",
+    "research": "node research.js",
+    "lab": "node lab.js",
+    "test": "node --test test/*.test.js",
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/functions": "3.9.9",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "node-cron": "^3.0.2"
+  }
+}

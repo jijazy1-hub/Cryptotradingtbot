@@ -1,0 +1,13 @@
+node_modules/
+.env
+.DS_Store
+signals.json
+.vercel
+.env*.local
+
+# Private notes with real secrets — never commit
+PRIVATE-*
+
+# Research data cache and outputs
+data/cache/
+research-results.json

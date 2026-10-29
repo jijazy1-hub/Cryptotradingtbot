@@ -1,0 +1,464 @@
+{
+  "available": true,
+  "generatedAt": "2026-10-24T08:07:40.858Z",
+  "strategy": "scanEngine (live v2scan logic) — 4H trend + 1H momentum + 15M entry",
+  "method": [
+    "Same signal code and candle windows as the live scanner; closed candles only",
+    "Entry at next 15m open + slippage; stop/TPs exactly as in the BUY alert",
+    "TP1 40% → stop to breakeven; TP2 35% → stop to TP1; TP3 remaining 25%",
+    "Stop assumed to hit first when a candle touches both; gaps fill at the open",
+    "Fees 0.1% per fill, slippage 0.05% on market fills",
+    "Risk 1% of equity per trade, no leverage, one position per coin"
+  ],
+  "settings": {
+    "feePct": 0.1,
+    "slippagePct": 0.05,
+    "riskPct": 1,
+    "initialCapital": 10000,
+    "maxHoldBars": null
+  },
+  "period": {
+    "from": "2025-10-23T19:30:00.000Z",
+    "to": "2026-10-24T08:00:00.000Z"
+  },
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "BNBUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "AVAXUSDT",
+    "LINKUSDT",
+    "NEARUSDT",
+    "INJUSDT",
+    "SUIUSDT",
+    "ARBUSDT"
+  ],
+  "errors": [],
+  "overall": {
+    "trades": 1863,
+    "wins": 762,
+    "losses": 1101,
+    "winRatePct": 40.9,
+    "winRateRange95": [
+      38.7,
+      43.2
+    ],
+    "expectancyR": -0.155,
+    "medianR": -1.088,
+    "avgTradePct": -0.204,
+    "profitFactor": 0.78,
+    "bestR": 2.49,
+    "worstR": -1.57,
+    "tp1HitRatePct": 40.9,
+    "tp3HitRatePct": 10.4,
+    "fullStopRatePct": 59.1,
+    "avgHoldHours": 15.7,
+    "enoughData": true
+  },
+  "verdict": "⚠️ Lost money per trade after fees in this period.",
+  "byScore": {
+    "7-8": {
+      "trades": 868,
+      "wins": 359,
+      "losses": 509,
+      "winRatePct": 41.4,
+      "winRateRange95": [
+        38.1,
+        44.7
+      ],
+      "expectancyR": -0.141,
+      "medianR": -1.074,
+      "avgTradePct": -0.236,
+      "profitFactor": 0.79,
+      "bestR": 2.48,
+      "worstR": -1.57,
+      "tp1HitRatePct": 41.4,
+      "tp3HitRatePct": 10.5,
+      "fullStopRatePct": 58.6,
+      "avgHoldHours": 14.8,
+      "enoughData": true
+    },
+    "9-10": {
+      "trades": 561,
+      "wins": 231,
+      "losses": 330,
+      "winRatePct": 41.2,
+      "winRateRange95": [
+        37.2,
+        45.3
+      ],
+      "expectancyR": -0.134,
+      "medianR": -1.091,
+      "avgTradePct": -0.141,
+      "profitFactor": 0.82,
+      "bestR": 2.49,
+      "worstR": -1.49,
+      "tp1HitRatePct": 41.2,
+      "tp3HitRatePct": 10.5,
+      "fullStopRatePct": 58.8,
+      "avgHoldHours": 16.2,
+      "enoughData": true
+    },
+    "11+": {
+      "trades": 434,
+      "wins": 172,
+      "losses": 262,
+      "winRatePct": 39.6,
+      "winRateRange95": [
+        35.1,
+        44.3
+      ],
+      "expectancyR": -0.211,
+      "medianR": -1.102,
+      "avgTradePct": -0.224,
+      "profitFactor": 0.7,
+      "bestR": 2.41,
+      "worstR": -1.55,
+      "tp1HitRatePct": 39.6,
+      "tp3HitRatePct": 10.1,
+      "fullStopRatePct": 60.4,
+      "avgHoldHours": 16.7,
+      "enoughData": true
+    }
+  },
+  "bySymbol": {
+    "BTCUSDT": {
+      "trades": 160,
+      "wins": 70,
+      "losses": 90,
+      "winRatePct": 43.8,
+      "winRateRange95": [
+        36.3,
+        51.5
+      ],
+      "expectancyR": -0.283,
+      "medianR": -1.195,
+      "avgTradePct": -0.221,
+      "profitFactor": 0.63,
+      "bestR": 2.21,
+      "worstR": -1.57,
+      "tp1HitRatePct": 43.8,
+      "tp3HitRatePct": 8.8,
+      "fullStopRatePct": 56.3,
+      "avgHoldHours": 18.1,
+      "enoughData": true,
+      "maxDrawdownPct": 30.01,
+      "totalReturnPct": -29.57,
+      "buyAndHoldPct": -26.96,
+      "period": {
+        "from": "2025-10-23T19:30:00.000Z",
+        "to": "2026-10-24T08:00:00.000Z"
+      }
+    },
+    "ETHUSDT": {
+      "trades": 157,
+      "wins": 64,
+      "losses": 93,
+      "winRatePct": 40.8,
+      "winRateRange95": [
+        33.4,
+        48.6
+      ],
+      "expectancyR": -0.221,
+      "medianR": -1.154,
+      "avgTradePct": -0.28,
+      "profitFactor": 0.66,
+      "bestR": 2.3,
+      "worstR": -1.55,
+      "tp1HitRatePct": 40.8,
+      "tp3HitRatePct": 10.2,
+      "fullStopRatePct": 59.2,
+      "avgHoldHours": 16.6,
+      "enoughData": true,
+      "maxDrawdownPct": 33.65,
+      "totalReturnPct": -29.83,
+      "buyAndHoldPct": -38.59,
+      "period": {
+        "from": "2025-10-23T19:30:00.000Z",
+        "to": "2026-10-24T08:00:00.000Z"
+      }
+    },
+    "SOLUSDT": {
+      "trades": 162,
+      "wins": 62,
+      "losses": 100,
+      "winRatePct": 38.3,
+      "winRateRange95": [
+        31.1,
+        45.9
+      ],
+      "expectancyR": -0.206,
+      "medianR": -1.152,
+      "avgTradePct": -0.206,
+      "profitFactor": 0.71,
+      "bestR": 2.3,
+      "worstR": -1.37,
+      "tp1HitRatePct": 38.3,
+      "tp3HitRatePct": 11.1,
+      "fullStopRatePct": 61.7,
+      "avgHoldHours": 14.8,
+      "enoughData": true,
+      "maxDrawdownPct": 35.05,
+      "totalReturnPct": -29.72,
+      "buyAndHoldPct": -46.86,
+      "period": {
+        "from": "2025-10-23T19:30:00.000Z",
+        "to": "2026-10-24T08:00:00.000Z"
+      }
+    },
+    "BNBUSDT": {
+      "trades": 157,
+      "wins": 59,
+      "losses": 98,
+      "winRatePct": 37.6,
+      "winRateRange95": [
+        30.4,
+        45.4
+      ],
+      "expectancyR": -0.338,
+      "medianR": -1.191,
+      "avgTradePct": -0.365,
+      "profitFactor": 0.55,
+      "bestR": 2.25,
+      "worstR": -1.49,
+      "tp1HitRatePct": 37.6,
+      "tp3HitRatePct": 9.6,
+      "fullStopRatePct": 62.4,
+      "avgHoldHours": 14.6,
+      "enoughData": true,
+      "maxDrawdownPct": 41.02,
+      "totalReturnPct": -39.69,
+      "buyAndHoldPct": -34.08,
+      "period": {
+        "from": "2025-10-23T19:30:00.000Z",
+        "to": "2026-10-24T08:00:00.000Z"
+      }
+    },
+    "XRPUSDT": {
+      "trades": 123,
+      "wins": 54,
+      "losses": 69,
+      "winRatePct": 43.9,
+      "winRateRange95": [
+        35.4,
+        52.7
+      ],
+      "expectancyR": -0.088,
+      "medianR": -1.091,
+      "avgTradePct": -0.215,
+      "profitFactor": 0.83,
+      "bestR": 2.38,
+      "worstR": -1.29,
+      "tp1HitRatePct": 43.9,
+      "tp3HitRatePct": 12.2,
+      "fullStopRatePct": 56.1,
+      "avgHoldHours": 14.5,
+      "enoughData": true,
+      "maxDrawdownPct": 22.8,
+      "totalReturnPct": -11.91,
+      "buyAndHoldPct": -46.56,
+      "period": {
+        "from": "2025-10-23T19:30:00.000Z",
+        "to": "2026-10-24T08:00:00.000Z"
+      }
+    },
+    "ADAUSDT": {
+      "trades": 137,
+      "wins": 50,
+      "losses": 87,
+      "winRatePct": 36.5,
+      "winRateRange95": [
+        28.9,
+        44.8
+      ],
+      "expectancyR": -0.212,
+      "medianR": -1.106,
+      "avgTradePct": -0.426,
+      "profitFactor": 0.68,
+      "bestR": 2.36,
+      "worstR": -1.21,
+      "tp1HitRatePct": 36.5,
+      "tp3HitRatePct": 10.2,
+      "fullStopRatePct": 63.5,
+      "avgHoldHours": 14.9,
+      "enoughData": true,
+      "maxDrawdownPct": 33.36,
+      "totalReturnPct": -26.05,
+      "buyAndHoldPct": -67.74,
+      "period": {
+        "from": "2025-10-23T19:30:00.000Z",
+        "to": "2026-10-24T08:00:00.000Z"
+      }
+    },
+    "AVAXUSDT": {
+      "trades": 136,
+      "wins": 49,
+      "losses": 87,
+      "winRatePct": 36,
+      "winRateRange95": [
+        28.4,
+        44.4
+      ],
+      "expectancyR": -0.245,
+      "medianR": -1.108,
+      "avgTradePct": -0.464,
+      "profitFactor": 0.65,
+      "bestR": 2.4,
+      "worstR": -1.26,
+      "tp1HitRatePct": 36,
+      "tp3HitRatePct": 10.3,
+      "fullStopRatePct": 64,
+      "avgHoldHours": 15.5,
+      "enoughData": true,
+      "maxDrawdownPct": 31.93,
+      "totalReturnPct": -29.15,
+      "buyAndHoldPct": -54.09,
+      "period": {
+        "from": "2025-10-23T19:30:00.000Z",
+        "to": "2026-10-24T08:00:00.000Z"
+      }
+    },
+    "LINKUSDT": {
+      "trades": 166,
+      "wins": 61,
+      "losses": 105,
+      "winRatePct": 36.7,
+      "winRateRange95": [
+        29.8,
+        44.3
+      ],
+      "expectancyR": -0.249,
+      "medianR": -1.122,
+      "avgTradePct": -0.437,
+      "profitFactor": 0.65,
+      "bestR": 2.49,
+      "worstR": -1.28,
+      "tp1HitRatePct": 36.7,
+      "tp3HitRatePct": 11.4,
+      "fullStopRatePct": 63.3,
+      "avgHoldHours": 16.7,
+      "enoughData": true,
+      "maxDrawdownPct": 35.89,
+      "totalReturnPct": -34.79,
+      "buyAndHoldPct": -32.97,
+      "period": {
+        "from": "2025-10-23T19:30:00.000Z",
+        "to": "2026-10-24T08:00:00.000Z"
+      }
+    },
+    "NEARUSDT": {
+      "trades": 197,
+      "wins": 86,
+      "losses": 111,
+      "winRatePct": 43.7,
+      "winRateRange95": [
+        36.9,
+        50.6
+      ],
+      "expectancyR": -0.01,
+      "medianR": -1.049,
+      "avgTradePct": 0.004,
+      "profitFactor": 0.97,
+      "bestR": 2.41,
+      "worstR": -1.25,
+      "tp1HitRatePct": 43.7,
+      "tp3HitRatePct": 10.7,
+      "fullStopRatePct": 56.3,
+      "avgHoldHours": 16.3,
+      "enoughData": true,
+      "maxDrawdownPct": 19.59,
+      "totalReturnPct": -3.67,
+      "buyAndHoldPct": 106.69,
+      "period": {
+        "from": "2025-10-23T19:30:00.000Z",
+        "to": "2026-10-24T08:00:00.000Z"
+      }
+    },
+    "INJUSDT": {
+      "trades": 176,
+      "wins": 83,
+      "losses": 93,
+      "winRatePct": 47.2,
+      "winRateRange95": [
+        39.9,
+        54.5
+      ],
+      "expectancyR": 0.068,
+      "medianR": -1.047,
+      "avgTradePct": 0.133,
+      "profitFactor": 1.1,
+      "bestR": 2.38,
+      "worstR": -1.19,
+      "tp1HitRatePct": 47.2,
+      "tp3HitRatePct": 11.4,
+      "fullStopRatePct": 52.8,
+      "avgHoldHours": 15.4,
+      "enoughData": true,
+      "maxDrawdownPct": 21.34,
+      "totalReturnPct": 10.92,
+      "buyAndHoldPct": -9.14,
+      "period": {
+        "from": "2025-10-23T19:30:00.000Z",
+        "to": "2026-10-24T08:00:00.000Z"
+      }
+    },
+    "SUIUSDT": {
+      "trades": 159,
+      "wins": 63,
+      "losses": 96,
+      "winRatePct": 39.6,
+      "winRateRange95": [
+        32.4,
+        47.4
+      ],
+      "expectancyR": -0.13,
+      "medianR": -1.087,
+      "avgTradePct": -0.27,
+      "profitFactor": 0.8,
+      "bestR": 2.38,
+      "worstR": -1.23,
+      "tp1HitRatePct": 39.6,
+      "tp3HitRatePct": 8.2,
+      "fullStopRatePct": 60.4,
+      "avgHoldHours": 14.8,
+      "enoughData": true,
+      "maxDrawdownPct": 23.94,
+      "totalReturnPct": -19.77,
+      "buyAndHoldPct": -61.53,
+      "period": {
+        "from": "2025-10-23T19:30:00.000Z",
+        "to": "2026-10-24T08:00:00.000Z"
+      }
+    },
+    "ARBUSDT": {
+      "trades": 133,
+      "wins": 61,
+      "losses": 72,
+      "winRatePct": 45.9,
+      "winRateRange95": [
+        37.6,
+        54.3
+      ],
+      "expectancyR": 0.017,
+      "medianR": -1.049,
+      "avgTradePct": 0.209,
+      "profitFactor": 1.01,
+      "bestR": 2.48,
+      "worstR": -1.16,
+      "tp1HitRatePct": 45.9,
+      "tp3HitRatePct": 11.3,
+      "fullStopRatePct": 54.1,
+      "avgHoldHours": 14.9,
+      "enoughData": true,
+      "maxDrawdownPct": 13.79,
+      "totalReturnPct": 1.09,
+      "buyAndHoldPct": -46.48,
+      "period": {
+        "from": "2025-10-23T19:30:00.000Z",
+        "to": "2026-10-24T08:00:00.000Z"
+      }
+    }
+  }
+}

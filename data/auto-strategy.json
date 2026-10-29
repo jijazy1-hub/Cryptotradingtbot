@@ -1,0 +1,996 @@
+{
+  "generatedAt": "2026-10-27T03:06:18.847Z",
+  "rules": {
+    "feePct": 0.1,
+    "slippagePct": 0.05,
+    "entry": "next daily open",
+    "stops": "daily low touch, gap fills at open",
+    "trainFrac": 0.65
+  },
+  "universe": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "BNBUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "DOGEUSDT",
+    "AVAXUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "LTCUSDT",
+    "TRXUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "UNIUSDT"
+  ],
+  "period": {
+    "from": "2018-08-10",
+    "split": "2023-12-11",
+    "to": "2026-10-26"
+  },
+  "btcBuyHoldTestPct": 94.3,
+  "families": [
+    {
+      "family": "donchian",
+      "name": "Breakout to a new high",
+      "chosen": {
+        "id": "donchian:55-20:btc",
+        "params": {
+          "entryN": 55,
+          "exitN": 20,
+          "regime": true
+        },
+        "label": "Breakout to a new high — buy a close above the 55-day high; exit on a 20-day low, only while BTC is above its 100-day average"
+      },
+      "train": {
+        "trades": 153,
+        "winRatePct": 52.3,
+        "expectancyR": 3.46,
+        "expectancyRange95": [
+          -0.154,
+          7.074
+        ],
+        "profitFactor": 13.88,
+        "avgTradePct": 105.12,
+        "avgDays": 42.7,
+        "bestR": 275.31,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 108,
+        "winRatePct": 42.6,
+        "expectancyR": 0.403,
+        "expectancyRange95": [
+          0.097,
+          0.71
+        ],
+        "profitFactor": 2.33,
+        "avgTradePct": 7.86,
+        "avgDays": 33,
+        "bestR": 8.1,
+        "worstR": -1.03
+      },
+      "portfolioTest": {
+        "taken": 55,
+        "returnPct": 21.5,
+        "maxDrawdownPct": 4.2
+      },
+      "verdict": "PASS",
+      "why": "made money after costs on data it never saw, and the result is unlikely to be luck"
+    },
+    {
+      "family": "emaTrend",
+      "name": "Trend pullback",
+      "chosen": {
+        "id": "emaTrend:20-100-4:btc",
+        "params": {
+          "fast": 20,
+          "slow": 100,
+          "k": 4,
+          "regime": true
+        },
+        "label": "Trend pullback — uptrend (EMA20 > EMA100 > EMA200) and a close back above EMA20; trail 4×ATR, only while BTC is above its 100-day average"
+      },
+      "train": {
+        "trades": 153,
+        "winRatePct": 47.7,
+        "expectancyR": 0.601,
+        "expectancyRange95": [
+          0.145,
+          1.058
+        ],
+        "profitFactor": 2.98,
+        "avgTradePct": 18.48,
+        "avgDays": 37,
+        "bestR": 29.44,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 117,
+        "winRatePct": 33.3,
+        "expectancyR": 0.111,
+        "expectancyRange95": [
+          -0.194,
+          0.417
+        ],
+        "profitFactor": 1.28,
+        "avgTradePct": -1.53,
+        "avgDays": 34.4,
+        "bestR": 14.09,
+        "worstR": -1.02
+      },
+      "portfolioTest": {
+        "taken": 59,
+        "returnPct": 24.9,
+        "maxDrawdownPct": 5.5
+      },
+      "verdict": "PROMISING",
+      "why": "made money after costs on unseen data, but the result could still be luck"
+    },
+    {
+      "family": "momentum",
+      "name": "Strongest coins",
+      "chosen": {
+        "id": "momentum:56-3-4:btc",
+        "params": {
+          "lookback": 56,
+          "topN": 3,
+          "k": 4,
+          "regime": true
+        },
+        "label": "Strongest coins — a top-3 coin by 56-day return, rising and above its 50-day EMA; trail 4×ATR, only while BTC is above its 100-day average"
+      },
+      "train": {
+        "trades": 140,
+        "winRatePct": 50.7,
+        "expectancyR": 1.076,
+        "expectancyRange95": [
+          0.574,
+          1.579
+        ],
+        "profitFactor": 4.58,
+        "avgTradePct": 31.24,
+        "avgDays": 39.7,
+        "bestR": 15.32,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 101,
+        "winRatePct": 39.6,
+        "expectancyR": 0.399,
+        "expectancyRange95": [
+          0.014,
+          0.784
+        ],
+        "profitFactor": 2.19,
+        "avgTradePct": 6.06,
+        "avgDays": 34.5,
+        "bestR": 13.96,
+        "worstR": -1.03
+      },
+      "portfolioTest": {
+        "taken": 78,
+        "returnPct": 34.7,
+        "maxDrawdownPct": 8.6
+      },
+      "verdict": "PASS",
+      "why": "made money after costs on data it never saw, and the result is unlikely to be luck"
+    }
+  ],
+  "pick": {
+    "family": "donchian",
+    "name": "Breakout to a new high",
+    "id": "donchian:55-20:btc",
+    "params": {
+      "entryN": 55,
+      "exitN": 20,
+      "regime": true
+    },
+    "label": "Breakout to a new high — buy a close above the 55-day high; exit on a 20-day low, only while BTC is above its 100-day average",
+    "verdict": "PASS",
+    "why": "made money after costs on data it never saw, and the result is unlikely to be luck",
+    "test": {
+      "trades": 108,
+      "winRatePct": 42.6,
+      "expectancyR": 0.403,
+      "expectancyRange95": [
+        0.097,
+        0.71
+      ],
+      "profitFactor": 2.33,
+      "avgTradePct": 7.86,
+      "avgDays": 33,
+      "bestR": 8.1,
+      "worstR": -1.03
+    },
+    "train": {
+      "trades": 153,
+      "winRatePct": 52.3,
+      "expectancyR": 3.46,
+      "expectancyRange95": [
+        -0.154,
+        7.074
+      ],
+      "profitFactor": 13.88,
+      "avgTradePct": 105.12,
+      "avgDays": 42.7,
+      "bestR": 275.31,
+      "worstR": -1.01
+    },
+    "portfolioTest": {
+      "taken": 55,
+      "returnPct": 21.5,
+      "maxDrawdownPct": 4.2
+    }
+  },
+  "verdict": "PASS",
+  "comparisons": {
+    "risk2": {
+      "donchian": {
+        "taken": 55,
+        "returnPct": 37.7,
+        "maxDrawdownPct": 8.9
+      },
+      "emaTrend": {
+        "taken": 59,
+        "returnPct": 47.5,
+        "maxDrawdownPct": 10.8
+      },
+      "momentum": {
+        "taken": 78,
+        "returnPct": 68.8,
+        "maxDrawdownPct": 16.3
+      }
+    },
+    "combo": {
+      "families": [
+        "donchian",
+        "momentum"
+      ],
+      "test": {
+        "trades": 200,
+        "winRatePct": 42,
+        "expectancyR": 0.439,
+        "expectancyRange95": [
+          0.186,
+          0.692
+        ],
+        "profitFactor": 2.42,
+        "avgTradePct": 7.71,
+        "avgDays": 34.2,
+        "bestR": 13.96,
+        "worstR": -1.03
+      },
+      "verdict": "PASS",
+      "portfolio1": {
+        "taken": 81,
+        "returnPct": 18.4,
+        "maxDrawdownPct": 7.6
+      },
+      "portfolio2": {
+        "taken": 81,
+        "returnPct": 34.1,
+        "maxDrawdownPct": 14.4
+      }
+    },
+    "btcTrend200": {
+      "returnPct": 75.7,
+      "maxDrawdownPct": 32,
+      "switches": 29,
+      "timeInMarketPct": 62
+    },
+    "btcHold": {
+      "returnPct": 94,
+      "maxDrawdownPct": 53,
+      "switches": 1,
+      "timeInMarketPct": 100
+    }
+  },
+  "variants": [
+    {
+      "id": "donchian:20-10:btc",
+      "family": "donchian",
+      "train": {
+        "trades": 287,
+        "winRatePct": 48.8,
+        "expectancyR": 0.878,
+        "expectancyRange95": [
+          0.536,
+          1.22
+        ],
+        "profitFactor": 3.88,
+        "avgTradePct": 19.22,
+        "avgDays": 20.9,
+        "bestR": 18.77,
+        "worstR": -1.02
+      },
+      "test": {
+        "trades": 215,
+        "winRatePct": 39.1,
+        "expectancyR": 0.399,
+        "expectancyRange95": [
+          0.107,
+          0.692
+        ],
+        "profitFactor": 2.22,
+        "avgTradePct": 5.68,
+        "avgDays": 16.8,
+        "bestR": 23.01,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "donchian:20-10",
+      "family": "donchian",
+      "train": {
+        "trades": 380,
+        "winRatePct": 44.7,
+        "expectancyR": 0.686,
+        "expectancyRange95": [
+          0.415,
+          0.957
+        ],
+        "profitFactor": 3.08,
+        "avgTradePct": 14.53,
+        "avgDays": 19.8,
+        "bestR": 18.77,
+        "worstR": -1.02
+      },
+      "test": {
+        "trades": 261,
+        "winRatePct": 35.2,
+        "expectancyR": 0.303,
+        "expectancyRange95": [
+          0.057,
+          0.549
+        ],
+        "profitFactor": 1.9,
+        "avgTradePct": 3.53,
+        "avgDays": 16.6,
+        "bestR": 23.01,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "donchian:55-20:btc",
+      "family": "donchian",
+      "train": {
+        "trades": 153,
+        "winRatePct": 52.3,
+        "expectancyR": 3.46,
+        "expectancyRange95": [
+          -0.154,
+          7.074
+        ],
+        "profitFactor": 13.88,
+        "avgTradePct": 105.12,
+        "avgDays": 42.7,
+        "bestR": 275.31,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 108,
+        "winRatePct": 42.6,
+        "expectancyR": 0.403,
+        "expectancyRange95": [
+          0.097,
+          0.71
+        ],
+        "profitFactor": 2.33,
+        "avgTradePct": 7.86,
+        "avgDays": 33,
+        "bestR": 8.1,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "donchian:55-20",
+      "family": "donchian",
+      "train": {
+        "trades": 174,
+        "winRatePct": 48.3,
+        "expectancyR": 3.053,
+        "expectancyRange95": [
+          -0.129,
+          6.235
+        ],
+        "profitFactor": 11.82,
+        "avgTradePct": 92.34,
+        "avgDays": 41,
+        "bestR": 275.31,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 115,
+        "winRatePct": 41.7,
+        "expectancyR": 0.348,
+        "expectancyRange95": [
+          0.068,
+          0.628
+        ],
+        "profitFactor": 2.1,
+        "avgTradePct": 7.44,
+        "avgDays": 33.4,
+        "bestR": 8.1,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "donchian:55-10:btc",
+      "family": "donchian",
+      "train": {
+        "trades": 207,
+        "winRatePct": 50.7,
+        "expectancyR": 0.862,
+        "expectancyRange95": [
+          0.466,
+          1.258
+        ],
+        "profitFactor": 4.01,
+        "avgTradePct": 21.97,
+        "avgDays": 21.8,
+        "bestR": 18,
+        "worstR": -1.02
+      },
+      "test": {
+        "trades": 141,
+        "winRatePct": 41.1,
+        "expectancyR": 0.236,
+        "expectancyRange95": [
+          -0.015,
+          0.486
+        ],
+        "profitFactor": 1.71,
+        "avgTradePct": 5.51,
+        "avgDays": 17.3,
+        "bestR": 9.95,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "donchian:55-10",
+      "family": "donchian",
+      "train": {
+        "trades": 235,
+        "winRatePct": 47.2,
+        "expectancyR": 0.736,
+        "expectancyRange95": [
+          0.383,
+          1.089
+        ],
+        "profitFactor": 3.52,
+        "avgTradePct": 18.98,
+        "avgDays": 21,
+        "bestR": 18,
+        "worstR": -1.02
+      },
+      "test": {
+        "trades": 151,
+        "winRatePct": 40.4,
+        "expectancyR": 0.22,
+        "expectancyRange95": [
+          -0.017,
+          0.456
+        ],
+        "profitFactor": 1.66,
+        "avgTradePct": 4.98,
+        "avgDays": 17.4,
+        "bestR": 9.95,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "emaTrend:20-50-3:btc",
+      "family": "emaTrend",
+      "train": {
+        "trades": 186,
+        "winRatePct": 44.6,
+        "expectancyR": 0.465,
+        "expectancyRange95": [
+          0.111,
+          0.82
+        ],
+        "profitFactor": 2.32,
+        "avgTradePct": 12.84,
+        "avgDays": 21.9,
+        "bestR": 25.97,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 134,
+        "winRatePct": 29.9,
+        "expectancyR": -0.01,
+        "expectancyRange95": [
+          -0.222,
+          0.202
+        ],
+        "profitFactor": 0.98,
+        "avgTradePct": -2.9,
+        "avgDays": 21.9,
+        "bestR": 5.04,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "emaTrend:20-50-3",
+      "family": "emaTrend",
+      "train": {
+        "trades": 210,
+        "winRatePct": 41.9,
+        "expectancyR": 0.421,
+        "expectancyRange95": [
+          0.097,
+          0.745
+        ],
+        "profitFactor": 2.14,
+        "avgTradePct": 10.01,
+        "avgDays": 21.9,
+        "bestR": 25.97,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 145,
+        "winRatePct": 29,
+        "expectancyR": -0.026,
+        "expectancyRange95": [
+          -0.227,
+          0.175
+        ],
+        "profitFactor": 0.94,
+        "avgTradePct": -3.26,
+        "avgDays": 21.5,
+        "bestR": 5.04,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "emaTrend:20-50-4:btc",
+      "family": "emaTrend",
+      "train": {
+        "trades": 146,
+        "winRatePct": 46.6,
+        "expectancyR": 0.524,
+        "expectancyRange95": [
+          0.072,
+          0.976
+        ],
+        "profitFactor": 2.66,
+        "avgTradePct": 17.73,
+        "avgDays": 36,
+        "bestR": 29.44,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 106,
+        "winRatePct": 34.9,
+        "expectancyR": 0.148,
+        "expectancyRange95": [
+          -0.186,
+          0.482
+        ],
+        "profitFactor": 1.37,
+        "avgTradePct": -1.17,
+        "avgDays": 34.3,
+        "bestR": 14.09,
+        "worstR": -1.02
+      }
+    },
+    {
+      "id": "emaTrend:20-50-4",
+      "family": "emaTrend",
+      "train": {
+        "trades": 163,
+        "winRatePct": 44.2,
+        "expectancyR": 0.48,
+        "expectancyRange95": [
+          0.068,
+          0.892
+        ],
+        "profitFactor": 2.45,
+        "avgTradePct": 14.43,
+        "avgDays": 35.8,
+        "bestR": 29.44,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 114,
+        "winRatePct": 34.2,
+        "expectancyR": 0.12,
+        "expectancyRange95": [
+          -0.155,
+          0.395
+        ],
+        "profitFactor": 1.3,
+        "avgTradePct": -0.88,
+        "avgDays": 34.4,
+        "bestR": 10.59,
+        "worstR": -1.02
+      }
+    },
+    {
+      "id": "emaTrend:20-100-3:btc",
+      "family": "emaTrend",
+      "train": {
+        "trades": 199,
+        "winRatePct": 46.2,
+        "expectancyR": 0.494,
+        "expectancyRange95": [
+          0.158,
+          0.831
+        ],
+        "profitFactor": 2.47,
+        "avgTradePct": 12.62,
+        "avgDays": 22.5,
+        "bestR": 25.97,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 153,
+        "winRatePct": 31.4,
+        "expectancyR": 0.019,
+        "expectancyRange95": [
+          -0.186,
+          0.224
+        ],
+        "profitFactor": 1.04,
+        "avgTradePct": -1.66,
+        "avgDays": 22.1,
+        "bestR": 5.37,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "emaTrend:20-100-3",
+      "family": "emaTrend",
+      "train": {
+        "trades": 231,
+        "winRatePct": 42.4,
+        "expectancyR": 0.394,
+        "expectancyRange95": [
+          0.099,
+          0.688
+        ],
+        "profitFactor": 2.09,
+        "avgTradePct": 8.76,
+        "avgDays": 22,
+        "bestR": 25.97,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 169,
+        "winRatePct": 30.2,
+        "expectancyR": -0.01,
+        "expectancyRange95": [
+          -0.201,
+          0.181
+        ],
+        "profitFactor": 0.98,
+        "avgTradePct": -2.32,
+        "avgDays": 21.6,
+        "bestR": 5.37,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "emaTrend:20-100-4:btc",
+      "family": "emaTrend",
+      "train": {
+        "trades": 153,
+        "winRatePct": 47.7,
+        "expectancyR": 0.601,
+        "expectancyRange95": [
+          0.145,
+          1.058
+        ],
+        "profitFactor": 2.98,
+        "avgTradePct": 18.48,
+        "avgDays": 37,
+        "bestR": 29.44,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 117,
+        "winRatePct": 33.3,
+        "expectancyR": 0.111,
+        "expectancyRange95": [
+          -0.194,
+          0.417
+        ],
+        "profitFactor": 1.28,
+        "avgTradePct": -1.53,
+        "avgDays": 34.4,
+        "bestR": 14.09,
+        "worstR": -1.02
+      }
+    },
+    {
+      "id": "emaTrend:20-100-4",
+      "family": "emaTrend",
+      "train": {
+        "trades": 175,
+        "winRatePct": 44.6,
+        "expectancyR": 0.52,
+        "expectancyRange95": [
+          0.115,
+          0.926
+        ],
+        "profitFactor": 2.61,
+        "avgTradePct": 15.28,
+        "avgDays": 36.5,
+        "bestR": 29.44,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 128,
+        "winRatePct": 32,
+        "expectancyR": 0.071,
+        "expectancyRange95": [
+          -0.178,
+          0.32
+        ],
+        "profitFactor": 1.17,
+        "avgTradePct": -1.7,
+        "avgDays": 34,
+        "bestR": 10.59,
+        "worstR": -1.02
+      }
+    },
+    {
+      "id": "momentum:28-3-3:btc",
+      "family": "momentum",
+      "train": {
+        "trades": 234,
+        "winRatePct": 47.9,
+        "expectancyR": 0.767,
+        "expectancyRange95": [
+          0.465,
+          1.069
+        ],
+        "profitFactor": 3.25,
+        "avgTradePct": 17.75,
+        "avgDays": 22.7,
+        "bestR": 19.07,
+        "worstR": -1.02
+      },
+      "test": {
+        "trades": 166,
+        "winRatePct": 29.5,
+        "expectancyR": 0.198,
+        "expectancyRange95": [
+          -0.061,
+          0.457
+        ],
+        "profitFactor": 1.5,
+        "avgTradePct": 1.87,
+        "avgDays": 19.7,
+        "bestR": 11.56,
+        "worstR": -1.04
+      }
+    },
+    {
+      "id": "momentum:28-3-3",
+      "family": "momentum",
+      "train": {
+        "trades": 316,
+        "winRatePct": 42.7,
+        "expectancyR": 0.565,
+        "expectancyRange95": [
+          0.322,
+          0.808
+        ],
+        "profitFactor": 2.54,
+        "avgTradePct": 12.83,
+        "avgDays": 22.8,
+        "bestR": 19.07,
+        "worstR": -1.02
+      },
+      "test": {
+        "trades": 215,
+        "winRatePct": 27,
+        "expectancyR": 0.082,
+        "expectancyRange95": [
+          -0.131,
+          0.295
+        ],
+        "profitFactor": 1.18,
+        "avgTradePct": -0.6,
+        "avgDays": 19.8,
+        "bestR": 11.56,
+        "worstR": -1.04
+      }
+    },
+    {
+      "id": "momentum:28-3-4:btc",
+      "family": "momentum",
+      "train": {
+        "trades": 168,
+        "winRatePct": 47.6,
+        "expectancyR": 1.06,
+        "expectancyRange95": [
+          0.582,
+          1.538
+        ],
+        "profitFactor": 4.56,
+        "avgTradePct": 31.23,
+        "avgDays": 37.5,
+        "bestR": 19.05,
+        "worstR": -1.02
+      },
+      "test": {
+        "trades": 119,
+        "winRatePct": 37.8,
+        "expectancyR": 0.414,
+        "expectancyRange95": [
+          0.022,
+          0.805
+        ],
+        "profitFactor": 2.18,
+        "avgTradePct": 5.67,
+        "avgDays": 35.4,
+        "bestR": 16.85,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "momentum:28-3-4",
+      "family": "momentum",
+      "train": {
+        "trades": 231,
+        "winRatePct": 43.7,
+        "expectancyR": 0.797,
+        "expectancyRange95": [
+          0.421,
+          1.172
+        ],
+        "profitFactor": 3.43,
+        "avgTradePct": 23.25,
+        "avgDays": 37.7,
+        "bestR": 19.05,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 156,
+        "winRatePct": 34,
+        "expectancyR": 0.21,
+        "expectancyRange95": [
+          -0.055,
+          0.474
+        ],
+        "profitFactor": 1.52,
+        "avgTradePct": 1.94,
+        "avgDays": 34.6,
+        "bestR": 10.73,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "momentum:56-3-3:btc",
+      "family": "momentum",
+      "train": {
+        "trades": 204,
+        "winRatePct": 47.5,
+        "expectancyR": 0.68,
+        "expectancyRange95": [
+          0.39,
+          0.971
+        ],
+        "profitFactor": 2.93,
+        "avgTradePct": 16.93,
+        "avgDays": 22.5,
+        "bestR": 14.23,
+        "worstR": -1.02
+      },
+      "test": {
+        "trades": 131,
+        "winRatePct": 40.5,
+        "expectancyR": 0.256,
+        "expectancyRange95": [
+          -0.01,
+          0.523
+        ],
+        "profitFactor": 1.72,
+        "avgTradePct": 3.42,
+        "avgDays": 21.2,
+        "bestR": 9.3,
+        "worstR": -1.04
+      }
+    },
+    {
+      "id": "momentum:56-3-3",
+      "family": "momentum",
+      "train": {
+        "trades": 265,
+        "winRatePct": 42.6,
+        "expectancyR": 0.546,
+        "expectancyRange95": [
+          0.3,
+          0.792
+        ],
+        "profitFactor": 2.52,
+        "avgTradePct": 12.7,
+        "avgDays": 23.1,
+        "bestR": 14.23,
+        "worstR": -1.02
+      },
+      "test": {
+        "trades": 166,
+        "winRatePct": 34.9,
+        "expectancyR": 0.169,
+        "expectancyRange95": [
+          -0.063,
+          0.401
+        ],
+        "profitFactor": 1.42,
+        "avgTradePct": 1.27,
+        "avgDays": 20.8,
+        "bestR": 9.3,
+        "worstR": -1.04
+      }
+    },
+    {
+      "id": "momentum:56-3-4:btc",
+      "family": "momentum",
+      "train": {
+        "trades": 140,
+        "winRatePct": 50.7,
+        "expectancyR": 1.076,
+        "expectancyRange95": [
+          0.574,
+          1.579
+        ],
+        "profitFactor": 4.58,
+        "avgTradePct": 31.24,
+        "avgDays": 39.7,
+        "bestR": 15.32,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 101,
+        "winRatePct": 39.6,
+        "expectancyR": 0.399,
+        "expectancyRange95": [
+          0.014,
+          0.784
+        ],
+        "profitFactor": 2.19,
+        "avgTradePct": 6.06,
+        "avgDays": 34.5,
+        "bestR": 13.96,
+        "worstR": -1.03
+      }
+    },
+    {
+      "id": "momentum:56-3-4",
+      "family": "momentum",
+      "train": {
+        "trades": 182,
+        "winRatePct": 44.5,
+        "expectancyR": 0.852,
+        "expectancyRange95": [
+          0.442,
+          1.262
+        ],
+        "profitFactor": 3.67,
+        "avgTradePct": 24,
+        "avgDays": 39.6,
+        "bestR": 15.32,
+        "worstR": -1.01
+      },
+      "test": {
+        "trades": 124,
+        "winRatePct": 36.3,
+        "expectancyR": 0.279,
+        "expectancyRange95": [
+          -0.019,
+          0.578
+        ],
+        "profitFactor": 1.74,
+        "avgTradePct": 3.46,
+        "avgDays": 34.3,
+        "bestR": 10.73,
+        "worstR": -1.03
+      }
+    }
+  ]
+}

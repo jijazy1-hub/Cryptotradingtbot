@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Trading Bot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        
+        .description {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .endpoints {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .endpoints h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .endpoint-item {
+            background: white;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+            font-family: 'Courier New', monospace;
+            color: #333;
+        }
+        
+        .endpoint-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .endpoint-method {
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .endpoint-path {
+            color: #764ba2;
+            font-weight: bold;
+        }
+        
+        .endpoint-desc {
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .links {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .features {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .features h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            color: #555;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📈 Crypto Trading Bot</h1>
+        <p class="subtitle">Multi-timeframe signals · Telegram alerts · Position monitoring</p>
+        
+        <p class="description">
+            An intelligent cryptocurrency trading bot with real-time signal generation, 
+            comprehensive backtesting capabilities, and Telegram notifications.
+        </p>
+        
+        <div class="features">
+            <h3>Key Features</h3>
+            <ul class="feature-list">
+                <li>Real-time trading signals for crypto pairs</li>
+                <li>Multi-timeframe technical analysis</li>
+                <li>Comprehensive backtesting engine</li>
+                <li>Telegram alerts and notifications</li>
+                <li>Risk management with position sizing</li>
+            </ul>
+        </div>
+        
+        <div class="endpoints">
+            <h3>API Endpoints</h3>
+            <div class="endpoint-item">
+                <div><span class="endpoint-method">GET</span> <span class="endpoint-path">/api/v2scan</span></div>
+                <div class="endpoint-desc">Get current trading signals for configured pairs</div>
+            </div>
+            <div class="endpoint-item">
+                <div><span class="endpoint-method">GET</span> <span class="endpoint-path">/api/backtest</span></div>
+                <div class="endpoint-desc">Run backtesting on historical data</div>
+            </div>
+        </div>
+        
+        <div class="links">
+            <a href="/dashboard" class="btn btn-primary">Open Dashboard</a>
+            <a href="/api/v2scan" class="btn btn-secondary">View Signals</a>
+            <a href="/api/backtest" class="btn btn-secondary">View Backtest</a>
+        </div>
+    </div>
+</body>
+</html>

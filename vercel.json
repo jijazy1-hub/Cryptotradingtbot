@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "regions": [
+    "fra1"
+  ],
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/paid",
+      "destination": "/api/app?action=paystack-callback"
+    },
+    {
+      "source": "/paystack-webhook",
+      "destination": "/api/app?action=paystack-webhook"
+    },
+    {
+      "source": "/flutterwave-webhook",
+      "destination": "/api/app?action=flutterwave-webhook"
+    }
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "includeFiles": "data/**",
+      "maxDuration": 60
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/v2monitor",
+      "schedule": "5 0 * * *"
+    }
+  ]
+}
